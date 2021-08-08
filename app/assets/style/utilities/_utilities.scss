@@ -1,0 +1,52 @@
+
+$utilities: map-merge(
+  $utilities,(
+    "position": map-merge(
+      map-get($utilities,"position"),
+      (
+        class: pos
+      )
+    ),
+    "width": map-merge(
+      map-get($utilities,"width"),
+      (
+        responsive: true,
+      )
+    ),
+    "justify-content": map-merge(
+      map-get($utilities,"justify-content"),
+      (
+        class: justify,
+      )
+    ),
+    "align-items": map-merge(
+      map-get($utilities,"align-items"),
+      (
+        class: items,
+      )
+    ),
+    "font-weight": (
+      responsive: true,
+      property: font-weight,
+      class: fw,
+      values: $weightVal
+    ),
+    "white-space": (
+      property: white-space,
+      class: ws,
+      values: (
+        wrap: normal,
+        nowrap: nowrap,
+        pre: pre,
+        pre-line: pre-line,
+        pre-wrap: pre-wrap
+      )
+    ),
+    "font-size": map-merge(
+      map-get($utilities,"font-size"),
+      (
+        rfs: false,
+      )
+    ),
+  )
+)

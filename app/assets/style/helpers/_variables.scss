@@ -5,6 +5,8 @@
 
 // Color system
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
 // scss-docs-start gray-color-variables
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -61,20 +63,21 @@ $colors: (
   "teal":       $teal,
   "cyan":       $cyan,
   "white":      $white,
-  "gray":       $gray-600,
+  "gray":       $gray-400,
   "gray-dark":  $gray-800
 ) !default;
 // scss-docs-end colors-map
 
 // scss-docs-start theme-color-variables
-$primary:       #00cc99; // $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       #630834 !default;
+$secondary:     #E31277 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         #EFEFEF !default;
 $dark:          $gray-900 !default;
+$gray:          #707070 !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -86,7 +89,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "gray":       $gray,
+  "white":      $white,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -230,7 +235,7 @@ $enable-important-utilities:  true !default;
 
 // Prefix for :root CSS variables
 
-$variable-prefix:             bs- !default;
+$variable-prefix:              !default;
 
 // Gradient
 //
@@ -240,6 +245,8 @@ $variable-prefix:             bs- !default;
 $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-end variable-gradient
 
+
+$base: 16;
 // Spacing
 //
 // Control the default styling of most Bootstrap elements by modifying these
@@ -249,12 +256,29 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  0:  0,
+  0\.5: (4/$base)*$spacer,
+  1:  (8/$base)*$spacer, 
+  1\.25: (10/$base)*$spacer,
+  1\.5:  (12/$base)*$spacer,
+  2:  (16/$base)*$spacer, 
+  2\.5: (20/$base)*$spacer,
+  3:  (24/$base)*$spacer, 
+  3\.5:  (28/$base)*$spacer,
+  3\.75:  (30/$base)*$spacer,
+  4:  (32/$base)*$spacer, 
+  4\.5:  (36/$base)*$spacer,
+  5:  (40/$base)*$spacer, 
+  6:  (48/$base)*$spacer, 
+  6\.5:   (52/$base)*$spacer,
+  7:  (56/$base)*$spacer, 
+  7\.5:  (60/$base)*$spacer,
+  8:  (64/$base)*$spacer, 
+  9:  (72/$base)*$spacer, 
+  10: (80/$base)*$spacer, 
+  11: (88/$base)*$spacer, 
+  12: (96/$base)*$spacer,
+  auto: auto
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -286,7 +310,7 @@ $body-text-align:           null !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -416,7 +440,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      'Roboto', 'Noto Sans TC', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$variable-prefix}font-sans-serif) !default;
@@ -441,6 +465,15 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
+$weightVal: (
+  light: 300,
+  base: 400,
+  med: 500,
+  bold: 700,
+) !default;
+
+
+
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
@@ -448,15 +481,19 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
-
+$sizer: 1rem;
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  bs: $sizer,
+  xl: (40/$base)*$sizer,
+  1:  (36/$base)*$sizer,
+  2:  (32/$base)*$sizer,
+  3:  (28/$base)*$sizer,
+  4:  (24/$base)*$sizer,
+  5:  (20/$base)*$sizer,
+  6:  (16/$base)*$sizer,
+  7:  (14/$base)*$sizer,
+  xs: (12/$base)*$sizer,
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1466,3 +1503,31 @@ $kbd-color:                         $white !default;
 $kbd-bg:                            $gray-900 !default;
 
 $pre-color:                         null !default;
+
+
+
+//自定義區域
+$flex-directionVal: (row, column, row-reverse, column-reverse) !default;
+
+$wrapVal: (wrap, nowrap, wrap-reverse) !default;
+
+$justify-contentVal: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    between: space-between,
+    around: space-around,
+    evenly: space-evenly,
+) !default;
+
+$displayVal: (flex, block, inline, inline-block, none) !default;
+
+$itemsVal: (
+    start: flex-start,
+    end: flex-end,
+    center: center,
+    baseline: baseline,
+    stretch: stretch,
+) !default;
+
+$alignVal: (baseline, top, middle, bottom, text-bottom, text-top) !default;

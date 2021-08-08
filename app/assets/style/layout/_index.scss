@@ -1,0 +1,32 @@
+.index-banner{
+  height: 30rem;
+  background-image: url('../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash (1).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header-nav {
+  height: 3.25rem;
+  gap: 1.125rem;
+  li{
+    min-width: 4rem;
+  }
+}
+
+.img__square {
+  object-fit: cover;
+  height: 21.875rem;
+  width: 21.875rem;
+}
+
+.liveReview{
+  background-image: url('../images/people2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  &__block{
+    background-color: #190014CC;
+  }
+}

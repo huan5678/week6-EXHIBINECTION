@@ -6,52 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%- title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="./assets/style/all.css">
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
+    <header class="border border-gray pos-relative">
+      <h2 class="pos-absolute top-50 start-50 translate-middle text-primary logo fs-4">EXHIBINECTION</h2>
+      <div class="container index-nav d-flex justify-end items-center">
+        <ul class="d-flex justify-between items-center list-unstyled">
+          <li class="d-none d-md-block">
+            <a class="link-gray p-2" href="#">Sign in</a>
+          </li>
+          <li class="me-2 d-none d-md-block">
+            <a class="link-gray p-2" href="#">Sign up</a>
+          </li>
+          <li class="pos-relative">
+            <a class="link-dark" href="#">
+              <span class="material-icons">
+                confirmation_number
+              </span>
+              <span class="pos-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary fs-xs">3</span>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </header>
 
     <%- contents %>
 
-    <footer class="footer">
-      footer
+    <footer>
+      <div class="footer d-flex flex-column justify-end">
+        <div class="container">
+          <h2 class="text-white fw-bold fs-4 mb-1.5">想收到展覽的最新消息嗎？<br />快訂閱我們！</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="輸入您的電子信箱" aria-label="輸入您的電子信箱" aria-describedby="button-addon2" />
+                <button class="btn btn-secondary py-1.5 px-6.5" type="button" id="button-addon2">訂閱</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container index-nav d-flex justify-between items-center">
+        <h3 class="d-flex flex-column flex-md-row">
+          <span class="logo me-2">EXHIBINECTION</span>
+          <span class="fs-bs">© 2020. All Rights Reserved.</span>
+        </h3>
+        <ul class="list-unstyled d-none d-md-flex items-center">
+          <li class="me-3"><a href="" class="link-gray">Sign in</a></li>
+          <li class=""><a href="" class="link-gray">Sign in</a></li>
+        </ul>
+      </div>
     </footer>
 
     <script src="./assets/js/vendors.js"></script>
