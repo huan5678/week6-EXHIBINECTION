@@ -16,4 +16,8 @@
       left: 0;
     }
   }
+  &--active{
+    padding-bottom: .25rem;
+    border-bottom: 1px solid $secondary;
+  }
 }

@@ -48,5 +48,35 @@ $utilities: map-merge(
         rfs: false,
       )
     ),
+    "overflow": map-merge(
+      map-get($utilities,"overflow"),(
+        responsive: true,
+        property: overflow,
+        state: hover,
+        class: overflow,
+        values: (
+          auto: auto,
+          hidden: hidden,
+          visible: visible,
+          scroll: scroll
+        )
+      )
+    ),
+    "overflow-x": map-merge(
+      map-get($utilities,"overflow"),(
+        responsive: true,
+        state: hover,
+        property: overflow-x,
+        class: overflow-x
+      )
+    ),
+    "overflow-y": map-merge(
+      map-get($utilities,"overflow"),(
+        responsive: true,
+        state: hover,
+        property: overflow-y,
+        class: overflow-y
+      )
+    )
   )
 )
