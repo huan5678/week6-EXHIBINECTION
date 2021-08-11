@@ -19,19 +19,6 @@
 }
 
 
-
-.img {
-  object-fit: cover;
-  height: 21.5625rem;
-  height: 21.875rem;
-  &__product{
-    width: 21.5625rem;
-    @include pad {
-      width: 21.875rem;
-    }
-  }
-}
-
 .liveReview{
   background-image: url('../images/people2.png');
   background-repeat: no-repeat;

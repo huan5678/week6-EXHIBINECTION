@@ -77,6 +77,12 @@ $utilities: map-merge(
         property: overflow-y,
         class: overflow-y
       )
+    ),
+    "shadow": map-merge(
+      map-get($utilities,"shadow"),(
+        responsive: true,
+        state: hover,
+      )
     )
   )
 )

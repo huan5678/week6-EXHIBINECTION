@@ -21,3 +21,21 @@
     border-bottom: 1px solid $secondary;
   }
 }
+
+.img {
+  object-fit: cover;
+  height: 21.5625rem;
+  height: 21.875rem;
+  &__product{
+    width: 21.5625rem;
+    @include pad {
+      width: 21.875rem;
+    }
+  }
+  &__detail{
+    height: 25rem;
+    &-long{
+      height: 34.9375rem;
+    }
+  }
+}

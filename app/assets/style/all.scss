@@ -4,10 +4,11 @@
 @import 'utilities/utilities';
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 
+@import 'mixin/breakpoint';
 @import 'helpers/helper';
 @import 'base/reset';
 @import 'base/base';
-@import 'mixin/breakpoint';
 
-@import 'layout/layout.scss';
-@import 'layout/index.scss';
+@import 'layout/layout';
+@import 'layout/index';
+@import 'layout/detail';
