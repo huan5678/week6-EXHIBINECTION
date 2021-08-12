@@ -24,7 +24,7 @@
             <a class="link-gray p-2" href="#">Sign up</a>
           </li>
           <li class="pos-relative">
-            <a class="link-dark" href="#">
+            <a class="link-dark" data-bs-toggle="offcanvas" href="#cartPage" role="button">
               <span class="material-icons">
                 confirmation_number
               </span>
@@ -67,7 +67,24 @@
         <li class="link text-center px-2 py-2"><a href="product.html" class="link--underline link--block ws-nowrap link-gray">期間限定</a></li>
       </ul>
     </nav>
-
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="cartPage">
+      <div class="offcanvas-header">
+        <h3 class="offcanvas-title text-white fs-2">Cart List</h3>
+      </div>
+      <div class="offcanvas-body bg-black">
+        <div class="card">
+          <div class="card-title">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-between">
+              <img src="./assets/images/alina-grubnyak-R84Oy89aNKs-unsplash.jpg" alt="台味設計展" class="img img__cart">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <%- contents %>
 
   <section class="container mb-3 mb-md-7.5" <% if(current === 'checkout'){%>hidden<%} %> >
