@@ -1,1 +1,1 @@
-# 六角切版直播版 - week6 EXHIBINECTION
+# 六角切版直播班 - week6 EXHIBINECTION
