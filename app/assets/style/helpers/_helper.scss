@@ -1,0 +1,49 @@
+.link {
+  position: relative;
+  &--underline{
+    &:hover{
+      padding-bottom: .25rem;
+      border-bottom: 1px solid $secondary;
+    }
+  }
+  &--block{
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  &--active{
+    padding-bottom: .25rem;
+    border-bottom: 1px solid $secondary;
+  }
+}
+
+.img {
+  object-fit: cover;
+  height: 21.5625rem;
+  height: 21.875rem;
+  &__product{
+    width: 21.5625rem;
+    @include pad {
+      width: 21.875rem;
+    }
+  }
+  &__detail{
+    height: 25rem;
+    &-long{
+      height: 34.9375rem;
+    }
+  }
+  &__cart{
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+  &__checkout{
+    width: 10rem;
+    height: 5.25rem;
+  }
+}

@@ -1,0 +1,20 @@
+.circle {
+  &::after{
+    content: '';
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid $secondary;
+    border-radius: 50%;
+    background-color: $white;
+  }
+  &--finished::after {
+    background-color: $secondary;
+  }
+}
