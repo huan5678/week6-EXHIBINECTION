@@ -23,3 +23,46 @@ font-size: 1.375rem;
   background-position: center;
   padding-bottom: 2.25rem;
 }
+
+.index-banner{
+  height: 30rem;
+  background-image: url('../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash (1).jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header-nav {
+  height: 3.25rem;
+  gap: 1.125rem;
+  li{
+    min-width: 4rem;
+  }
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+
+.liveReview{
+  background-image: url('../images/people2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  &__block{
+    background-color: #190014CC;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.ticket{
+  &__block{
+    height: 16rem;
+  }
+}
+
