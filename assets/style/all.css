@@ -19923,6 +19923,38 @@ fieldset:disabled .btn {
   height: 5.25rem;
 }
 
+.circle::after {
+  content: '';
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+  top: -0.5rem;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid #E31277;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.circle--finished::after {
+  background-color: #E31277;
+}
+
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #212529;
+}
+
 html, body, div, span, applet, object, iframe, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em,
 img, ins, kbd, q, s, samp, small, .small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -20226,38 +20258,6 @@ img {
 
 .ticket__block {
   height: 16rem;
-}
-
-.divider::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 100%;
-  background-color: #212529;
-}
-
-.circle::after {
-  content: '';
-  top: 0;
-  left: 0;
-  display: block;
-  position: absolute;
-  top: -0.5rem;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 1px solid #E31277;
-  border-radius: 50%;
-  background-color: #fff;
-}
-
-.circle--finished::after {
-  background-color: #E31277;
 }
 
 /*# sourceMappingURL=all.css.map */
