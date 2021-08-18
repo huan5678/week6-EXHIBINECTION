@@ -27,8 +27,8 @@
   height: 21.5625rem;
   height: 21.875rem;
   &__product{
-    width: 21.5625rem;
-    @include pad {
+    width: auto;
+    @include media-breakpoint-up(lg){
       width: 21.875rem;
     }
   }
@@ -77,4 +77,19 @@
   width: 1px;
   height: 100%;
   background-color: $dark;
+}
+
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track{
+    background: $gray-200;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: $secondary;
+    &:hover{
+      background: shade-color($secondary, 40%);
+    }
+  }
 }

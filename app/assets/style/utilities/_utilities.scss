@@ -4,7 +4,14 @@ $utilities: map-merge(
     "position": map-merge(
       map-get($utilities,"position"),
       (
+        responsive: true,
         class: pos
+      )
+    ),
+    "translate-middle": map-merge(
+      map-get($utilities,"translate-middle"),
+      (
+        responsive: true,
       )
     ),
     "width": map-merge(
@@ -110,6 +117,15 @@ $utilities: map-merge(
           '90': 90vh
         )
       )
-    )
+    ),
+    "viewport-height": map-merge(
+      map-get($utilities,"viewport-height"),(
+        values: (
+          50: 50vh,
+          70: 70vh,
+          90: 90vh
+        )
+      )
+    ),
   )
 )

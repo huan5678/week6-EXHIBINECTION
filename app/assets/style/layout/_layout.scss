@@ -1,6 +1,6 @@
-.index-nav {
+.nav {
   height: 3.75rem;
-  @include pad {
+  @include media-breakpoint-up(md){
     height: 5rem;
   }
 }
@@ -10,12 +10,15 @@
 font-family: 'Arial', 'Hebrew Scholar';
 line-height: 1;
 font-size: 1.375rem;
-@include pad {
+@include media-breakpoint-up(md) {
   font-size: 1.5rem;
 }
 }
 
-.footer {
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 25rem;
   background-image: url("../images/wladislaw-peljuchno-Y_f1aHpR1tc-unsplash.jpg");
   background-size: cover;
@@ -24,7 +27,10 @@ font-size: 1.375rem;
   padding-bottom: 2.25rem;
 }
 
-.index-banner{
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 30rem;
   background-image: url('../images/ricardo-gomez-angel-UrOZTfXT0h0-unsplash (1).jpg');
   background-repeat: no-repeat;
